@@ -1,0 +1,34 @@
+[jellydub]
+source_lang = "auto" # detect Vietnamese filename tags/diacritics; en | vi override
+translator = "opus-mt" # offline default; gemini = online API; agy / agy-stream = experimental CLI
+# translator_model = "MODEL_ID" # optional override; omit for the backend default
+# Gemini credentials: set GEMINI_API_KEY in your environment, never in this file.
+tts = "edge"
+tts_workers = 4 # recommend 3–4 for Edge; VieNeu is limited to one worker
+# Omit voice when changing engines to use that engine's preset.
+voice = "vi-VN-HoaiMyNeural"
+rate = "+0%"
+pitch = "+0Hz"
+mix = "dub-only" # dub-only | voiceover | replace
+mkv = false
+audio_stream = 0 # audio stream a:0, not global stream index
+cache_dir = "~/.cache/jellydub"
+# out_dir = "/tmp/jellydub-output"
+fallback_voiceover = false
+device = "auto" # local translation/separation; VieNeu uses CPU for auto
+max_tempo = 1.25
+# VieNeu only: clean 3–8 second clips; one default or several labelled refs.
+# reference = ["actor.wav"]
+# reference = ["TYSON=tyson.wav", "NARRATOR=narrator.wav"]
+
+# Subtitle discovery when dub has no explicit --srt:
+subs = "auto" # auto | local | download | translate
+download = true # false disables all subtitle-provider network searches
+search_online = false # true searches even if local VI quality/sync are excellent
+providers = ["opensubtitlescom", "podnapisi", "gestdown"]
+
+# Environment variable NAMES only. Set their values privately in your environment.
+[jellydub.subtitle_credentials_env]
+username = "OPENSUBTITLES_USERNAME"
+password = "OPENSUBTITLES_PASSWORD"
+apikey = "OPENSUBTITLES_APIKEY"

@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.jellydub-cache/
+*.egg-info/
+dist/
+tests/e2e/_out/

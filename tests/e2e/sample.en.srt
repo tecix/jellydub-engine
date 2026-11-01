@@ -1,0 +1,11 @@
+1
+00:00:01,000 --> 00:00:04,000
+Hello. Welcome to JellyDub.
+
+2
+00:00:06,000 --> 00:00:09,000
+Today we are watching a short film.
+
+3
+00:00:11,000 --> 00:00:14,000
+Thank you for listening.
